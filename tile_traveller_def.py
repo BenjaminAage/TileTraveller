@@ -1,39 +1,43 @@
-def routes(i):
+def routes(direction, route):
   for i in route:
     if i in direction:
-      if direction == "N":
-        y += 1
-      elif direction == "E":
-        x += 1
-      elif direction == "S":
-        y -= 1
-      elif direction == "W":
-        x -= 1
-      break
-  else:
-    print("Not a valid direction!")
+      return True
+  return False
+      
+#       
+#       if direction == "N":
+#         y += 1
+#       elif direction == "E":
+#         x += 1
+#       elif direction == "S":
+#         y -= 1
+#       elif direction == "W":
+#         x -= 1
+#       break
+#   else:
+#     print("Not a valid direction!")
+# 
 
-
-def status():
+def new_route(x, y):
   if x2 != x or y2 != y:
     if x == 1 and y == 1:
-      route = "N"
+      return "N"
     elif x == 1 and y == 2:
-      route = "NES"
+      return "NES"
     elif x == 1 and y == 3:
-      route = "ES"
+      return "ES"
     elif x == 2 and y == 1:
-      route = "N"
+      return "N"
     elif x == 2 and y == 2:
-      route = "SW"
+      return "SW"
     elif x == 2 and y == 3:
-      route = "EW"
+      return "EW"
     elif x == 3 and y == 1:
-      break
+      return ""
     elif x == 3 and y == 2:
-      route = "NS"
+      return "NS"
     elif x == 3 and y == 3:
-      route = "SW"
+      return "SW"
     print("You can travel: ", end="")
 
 def printed():
